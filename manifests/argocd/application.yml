@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/rafaelhueb92/workshopCloud-gitops
     targetRevision: HEAD
-    path: manifests
+    path: manifests/.
   destination:
     server: https://kubernetes.default.svc
     namespace: default
