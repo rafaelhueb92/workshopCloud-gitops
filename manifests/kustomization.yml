@@ -1,16 +1,18 @@
 resources:
-  - frontend/deploy.yml
-  - frontend/service.yml
-  - backend/deploy.yml
-  - backend/service.yml
-  - ingress.yml
-  - argocd/application.yml
+- frontend/deploy.yml
+- frontend/service.yml
+- backend/deploy.yml
+- backend/service.yml
+- ingress.yml
+- argocd/application.yml
+
 
 images:
-  - name: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
-    newName: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
-    newTag: "V1.3"
-
-  - name: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
-    newName: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
-    newTag: "V1.3"
+- name: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
+  newName: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/backend
+  newTag: 550c3912ffcba14f7d09b1345374a01e72d82569
+- name: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
+  newName: 180294221572.dkr.ecr.us-east-1.amazonaws.com/dvn-workshop/production/frontend
+  newTag: V1.3
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
